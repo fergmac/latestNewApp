@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LatestNewsApp</title>
+</head>
+<body>
+	<section class="container">
+		<!--/////////////////////main////////////////////////////-->
+
+		<header class="header">
+			
+			<img class="nyt-symbol" src="images/nyt-logo.svg" alt="NYtimes-logo">
+
+			<div class="search-box">
+				<div class="search-text">
+					<p>Choose a section:</p>
+				</div>
+				<select name="select" id="article-search">
+					<option value="Sections" id="article-name" selected>Sections...</option>
+					<option value="home">Home</option>
+					<option value="science">Science</option>
+					<option value="business">Business</option>		
+					<option value="sports">Sports</option>	
+					<option value="technology">Technology</option>
+					<option value="fashion">Fashion</option>
+				</select>
+			</div>
+		</header>
+		<div class="article-container">
+			<ul class="article-list">
+			</ul>
+		</div>
+		<!--///////////////////////////footer//////////////////////-->
+
+		<footer class="footer">
+			<div class="copyright">
+				<p>&copy; Copyright 2019 <span class="latestNews">latesetNews</span></p>
+			</div>
+		</footer>
+	</section>
+	<!--//////////////////////////javascript//////////////-->
+
+	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	<script src="build/bundle.js"></script>
+</body>
+</html>

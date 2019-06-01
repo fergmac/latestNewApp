@@ -1,0 +1,10 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /*  padding and borders are not set to element height */
+    box-sizing: inherit;
+    /* forcing inheritance to every element on the page */
+}
+

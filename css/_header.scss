@@ -1,0 +1,241 @@
+
+/****************** media queries *************/
+
+
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+      @content;  
+    }
+}
+@mixin tablet {
+    @media (min-width: $tablet-width) {
+      @content;  
+    }
+}
+@mixin mobile {
+    @media (min-width: $mobile-width) {
+      @content;  
+    }
+}
+
+html {
+    font-size: 16px;
+    color: $white;
+    
+}
+
+body {
+
+    background-color: black;
+    box-sizing: border-box;
+    font-family: 'open_sans', sans-serif;
+}
+
+
+/********************** header ********************/
+
+.header {
+    height: 80vh;
+    display: -webkit-box;   
+    display: -moz-box;       
+    display: -ms-flexbox;     
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        flex-direction: row;  
+  
+    }
+
+    @include desktop {
+        justify-content: flex-start;
+
+    }
+}
+
+.nyt-symbol {
+    display: -webkit-box;     
+    display: -moz-box;       
+    display: -ms-flexbox;      
+    display: -webkit-flex;
+    display: flex;
+    flex: 0 1 25%;
+    justify-content: center;
+    height: 35%;  
+    animation: nudge 1s linear;
+}
+
+@keyframes nudge {
+  0% {
+    transform: translate(-100, 0);
+  }
+  
+  50% {
+    transform: translate(-50px, 0);
+  }
+  
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+
+
+.nyt-search-size {
+    padding: 2rem;
+    animation: spin 1s linear;
+    @include tablet {
+    height: 20vh;
+    width:  20vw;
+    }
+    
+}
+
+@keyframes spin {
+  0% {
+    
+    transform: rotate(0deg);
+  }
+  
+  50% {
+    transform: rotate(- 180deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.header-search {
+    height: auto;
+}
+
+.article-container {
+    text-align: center;
+}
+
+.ajax-loader {
+      height: 10vh;
+      width: 10vh;
+}
+
+.search-box {
+    display: -webkit-box;      
+    display: -moz-box;        
+    display: -ms-flexbox;      
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.search-text {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+/********************** article list *************/
+ 
+#article-search {
+    padding-top: 2rem;
+
+}
+
+.article-list {
+    @include tablet {
+        display: -webkit-box;      
+        display: -moz-box;       
+        display: -ms-flexbox;      
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:  100%;
+ }
+    @include desktop {
+        display: -webkit-box;    
+        display: -moz-box;        
+        display: -ms-flexbox;     
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:  100%;
+    }
+}
+
+.article {
+    
+        @include tablet {
+        flex: 1 0 50%;
+    }
+    
+        @include desktop {
+        flex: 1 0 25%;
+    }
+}
+
+.article-box {
+    display: -webkit-box;    
+    display: -moz-box;       
+    display: -ms-flexbox;    
+    display: -webkit-flex;
+    display: flex;
+    height: 50vh;
+    background-size: cover;
+    background-position: 50%;
+     a{
+        display: -webkit-box;    
+        display: -moz-box;        
+        display: -ms-flexbox;      
+        display: -webkit-flex;
+        display:flex;
+        align-self: flex-end;
+        text-decoration: none;
+    }
+
+}
+
+/****************** list - text ************/
+.article {
+    overflow: hidden;
+    a{
+        p{
+            transform: translateY(100%);
+        }
+    }
+    &:hover {
+        p{
+        transform: translateY(0%);
+        }   
+    }
+}
+
+.caption {
+    align-self: flex-end;
+    text-decoration: none;
+    color: $white;
+    line-height: 150%;
+    p {
+        background: rgba( 0, 0, 0, 0.5);
+        padding: .5rem .5rem;
+        text-decoration: none;       
+    }
+}
+
+.caption-font {
+    text-decoration: none;  
+}
+
+
+
+
